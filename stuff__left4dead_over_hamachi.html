@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>tnuC - l4d/l4d2 over hamachi</title>
+<link rel="stylesheet" type="text/css" href="/style.css" />
+<link rel="shortcut icon" href=/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="google-site-verification" content="r4kc5inK8BZYGZhicbC-usP4F1rGaeTrqYNChcZRNKI" />
+<meta name="description" content="tnuC Stuff. A tutorial on playing Left4Dead and Left4Dead2 over Hamachi rather than Steam." />
+<meta name="author" content="Flo" />
+<meta name="keywords" content="tnuc,flo,mavina,najko,tibia,cams,eternia,l4d,l4d2,left4dead,left4dead2,hamachi,nosteam" />
+<meta name="robots" content="index, follow, noimageindex" />
+</head>
+<body>
+<center>
+<div id="wrap">
+<div id="bnr"></div>
+<div id="bar"><a href="/">tnuC</a> &nbsp;&#187;&nbsp; <a href="/stuff.html">stuff</a> &nbsp;&#187;&nbsp; <a href="/stuff__left4dead_over_hamachi.html">left4dead over hamachi</a>
+<div id="barsw"></div>
+<div id="barnw"></div>
+<div id="barne"></div>
+<div id="barse"></div>
+</div>
+<div id="content">
+<div id="inner">
+
+
+<h1>Left4Dead / Left4Dead2 over Hamachi</h1>
+<a href="/stuff.html">back</a><br /><br />
+
+Before scrolling down, it looks harder than it really is.<br />
+You can get through this entire wall of text within 2 minutes of explaining on vent instead.<br /><br />
+
+<h2>I. Preparing L4D<span class="phpstr">2</span></h2><br />
+1. Install Left4Dead<span class="phpstr">2</span>.<br />
+3. Rightclick your L4D<span class="phpstr">2</span> desktop shortcut and go to 'Properties'.<br />
+4. Add ' -console' at the end of the target path on the 'Link' tab. <span class="phpcom">**</span><br />
+5. You might want to add ' -novid' to the path as well to suppress the intro video.<br />
+&nbsp;(<i>Example: "C:\Program Files\L4D<span class="phpstr">2</span>\l4d<span class="phpstr">2</span>.exe" -console</i>)<br />
+6. Apply changes.<br /><br />
+
+<span class="phpcom">&lt;**</span><br />If that's not possible because of a certain launcher, and the console won't open in the main menu:<br />
+-Start a single player game via the campaign, open the console ingame and type disconnect before hosting a game later.<br /><br />
+If your (non-English) keyboard doesn't recognise the default (~) console hotkey:<br />
+-Open "Left 4 Dead 2\left4dead2\cfg\config.cfg" in a text editor that supports Linux linebreaks (NOT notepad).<br />
+-You'll notice it's alright when you see the single commands underneath each other, not on one line.<br />
+-Add the following line (feel free to replace "p" with any other unoccupied key/letter):<br />
+<b>bind "p" toggleconsole</b><br />
+-Save and exit<br />
+Or download <a "href="/-files/config.cfg">this config file</a> instead (L4D2 default + console on [P])<br />
+<span class="phpcom">**&gt;</span><br /><br /><br />
+
+<h2>II. Configuring Hamachi:</h2><br />
+1. Install <a href="http://www.hamachi.cc" target="_blank">Hamachi</a>.<br />
+2. Launch it and follow the tutorial if you are not familiar with Hamachi.<br />
+3. Click the gear wheel icon in the lower right corner and go to 'Preferences'.<br />
+4. Go to the 'Window' tab and check 'Show advanced... peer menu item'.<br />
+5. Apply changes and close the Preferences window.<br />
+6. Connect to your L4D<span class="phpstr">2</span> network.<br /><br />
+
+Now for the annoying part:<br />
+Source based games require everybody in a LAN game to be in the same <b>class C network</b>. 
+Means, if your Hamachi IP is <b>5.138.91.64</b> the IPs of everybody else have to start with <b>5.138.91.</b> as well. 
+The workaround is creating VPN Aliases, made-up IPs inside your own class C network telling the game everything is alright 
+while they actually point at completely different IPs. Don't worry, you don't have to understand that, really.<br />
+Just take a look at these two screenshots:<br /><br />
+<div class="ac">
+<img src="/-img/sub/l4d1.gif" alt="hamachi main window" title="hamachi main window" /><br /><br />
+<img src="/-img/sub/l4d2.gif" alt="advanced peer menu" title="advanced peer menu" />
+</div><br /><br />
+
+<strong>Note:</strong><br />
+Your Hamachi window will look different as I use custom labels.<br /><br />
+My IP is shown in the main window: <b>5.138.91.64</b>.<br />
+Kev's IP (Hamachi ID) <b>is 5.141.237.38</b>.<br />
+Now, to create a VPN alias you rightclick the user of your choice and go to 'Advanced'.<br />
+Leave his 'Peer VPN ADDRESS' as it is.<br />
+Set his 'Peer VPN ALIAS' to an IP of your choice using the first 3 parts of your own IP (here: <b>5.138.91.</b>).<br />
+Use a random suffix between .1 and .254 (here: <b>44</b>) EXCEPT FOR:<br />
+-Your own or<br />
+-One that is already used by somebody else<br /><br />
+Additionally, set 'Local forwarding' and 'Remote forwarding' to 'enabled'.<br /><br /><br />
+
+<strong>Note:</strong><br />
+If you are the <b>hoster</b> of a game, you have to do this <b>for all players</b> beforehand.<br />
+If you join somebody else's game, you only have to do this for the hoster of the game.<br />
+Ideally, have everbody do it for everybody in the network.<br /><br />
+
+Now have a second look at the first screenshot:<br />
+Erik for example uses a random IP and the Alias <b>5.138.91.</b>200 the ending of which is random but easy to 
+remember as he is our default hoster. I suggest you use custom labels as well (rightclick > set label > custom) 
+so you can look up others' aliases without having to go to the 'Advanced' user menu. But now back to hosting 
+and actually playing the game.<br /><br /><br />
+
+<h2>III. Hosting a game</h2>
+<strong>First-time setup:</strong><br />
+1. Go to your control panel > 'Network Connections'.<br />
+2. Go to 'Advanced' > 'Advanced Settings'.<br />
+3. Select Hamachi and move it to the top of the list using the green arrows on the right.<br />
+4. Reboot your computer.<br /><br />
+<div align="center">
+<img src="/-img/sub/l4d3.png" alt="control panel - network connections" title="control panel - network connections" /><br /><br />
+<img src="/-img/sub/l4d4.png" alt="advanced settings" title="advanced settings" />
+</div><br /><br />
+
+<strong>Hosting the game (finally):</strong><br />
+1. Log off Steam, otherwise nobody will be able to connect without being on Steam also.<br />
+2. Start Left4Dead.<br />
+3. Type the following into the console.<br />
+ (<i>replace &lt;&lt;hamachi ip&lt;&lt; with your Hamachi IP (here: </i><b>5.138.91.64</b><i>)<br />
+ and &lt;&lt;map&gt;&gt; with the map name (eg. l4d_vs_hospital03_sewers or c3m4_plantation<br />
+note that l4d has different maps for coop (l4d_) and versus (l4d_vs_)</i>)
+<br /><br />
+<pre>sv_lan 1
+sv_allow_lobby_connect_only 0
+ip &lt;&lt;hamachi ip&gt;&gt;
+mp_gamemode coop|versus|survival           <span class="phpcom">(leave out if coop)</span>
+                                           <span class="phpcom">(disabled in l4d2 demo without SourceMod)</span>
+net_start
+map &lt;&lt;map&gt;&gt;</pre>
+<br />
+4. Done, game should be loading by now.<br /><br /><br />
+
+<h2>IV. Joining a game</h2>
+1. Start Left4Dead.<br />
+2. Type the following into the console.<br />
+ (<i>replace &lt;&lt;alias&gt;&gt; with the 'Peer VPN ALIAS' you set for the hoster (here: </i><b>5.138.91.200</b><i> if Erik hosts)</i>)<br /><br />
+<pre>connect &lt;&lt;alias&gt;&gt;</pre><br />
+3. Done, you should be connecting by now.
+<br /><br /><a href="/stuff.html">back</a>
+
+
+</div>
+</div>
+<div id="foot">
+<p class="nobold">last updated Jun 30 2012-ish</p>
+<p><a href="/about.html">about</a> &nbsp;&bull;&nbsp; <a href="/contact.html">contact</a></p>
+<p>2006-2012 Flo &nbsp;|&nbsp; <a class="silver" href="/">tnuC v8</a>
+</p>
+</div>
+</center>
+</body>
+</html>

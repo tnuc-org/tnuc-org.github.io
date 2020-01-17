@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+<meta name="description" content="Advanced Ventrilo Lookup script for hidden Servers. Shows users ordered by the channels they are in and more. By Flo - tnuC.org.">
+<meta name="author" content="Flo">
+<meta name="keywords" content="tnuc,tibia,flo,ventcheck,ventrilo,lookup,vent,check,status,najko">
+<link rel="stylesheet" href="vcheck.css" type="text/css"> 
+<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon"> 
+<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+<title>Ventcheck</title>
+</head><body>
+<a href="./">Back</a>
+<div id="outer" align="center";">
+<div id="wrap" align="center";">
+	
+<h1>Ventcheck - Help</h1><br />
+<a href="./vcheck.html">back</a><br /><br />
+<div class="l">
+There are thousands of Ventrilo status scripts on the internet, all of which show exactly the same as the one of Ventrilo.com, 
+except with more fancy colours and icons. But what if channels, names, comments and all that are hidden by the admin? 
+All you'll see is a table with a ton of Xs and seemingly random numbers.
+<br /><br />
+But hey, you still got me.<br />
+This script is designed to get the maximum amount of information out of said table. You'll be able to see how many users 
+are in the same channel, how many of them are admins or phantoms, how long they have been online and more. You might want 
+to go as far as calling it the next generation of espionage on Tibia, if only because appreciation gives me a raging hardon.
+<br /><br /><br />
+<h2>Recent Changes:</h2>
+-Rewrote everything from scratch, old code was just shit 1.5 years ago<br />
+-Replaced JavaScript 'Refresh' link with normal one (wtf was I thinking?)<br />
+-Now using cURL instead of file_get_contents() so no more loading errors<br />
+-Removed 'possible MCs' as detected by ping, was completely useless<br />
+-Added phantom support for the channel overview (though hidden by default)<br />
+-Phantoms are now hidden from all statistics by default unless explicitly requested<br />
+-Fixed bug that would ignore users with spaces in names (if names unhidden)<br />
+-Added a 4th colour indicator (blue) for the default view (not min)<br />
+-Changed Ontime to showing ((hh:)mm:)ss rather than seconds depending on ontime<br />
+-Fixed CSS float bug (menu wrapping around the left table)<br />
+-Removed that motherfucking semicolon in the top left corner<br />
+-Script will now tell you when channels or names are unhidden in the server settings,<br />
+&nbsp;&nbsp;you can then check vent.com or any other script for more info on those<br />
+-Added hit counter on min view out of curiosity, my server stat logs are shit.<br />
+&nbsp;&nbsp;(invisible unless you run NoScript anyway)<br /><br />
+<strong>Note:</strong><br />
+I just formatted my comp and haven't re-installed all my browsers for CSS testing yet.<br />
+Layout works flawlessly in Chrome, FF3.5 and IE6.<br />
+Contact me using the form on tnuC.org if it looks messed up in IE7/IE8.<br />
+(incl. screenshot if possible)
+<br /><br /><br />
+<h2>Default View:</h2>
+While the main idea behind the entire script is the minimized version, a more graphical approach is way more eye-friendly for 
+the casual lookup.
+<br /><br />
+<strong>Default View shows:</strong><br />
+-Total number of real users online (excluding phantoms)<br />
+-Numbers of admins online<br />
+-Number of phantoms online (hidden elsewhere unless you click 'Show Phantoms')<br />
+-Server uptime<br />
+-Additional unhidden info (Channels and/or User names), only shown if unhidden<br />
+&nbsp;&nbsp;Check Ventrilo.com for more information like channel/name listings if so<br /><br />
+Additionally, you will see a list of channels ordered by the number of users inside and a list of the (up to) five last users 
+that logged on. Flags can be A (Admin), P (Phantom) or L (Lobby). A channel with 3 As in the flags column means there are 3 
+Admins in the channel. The lobby is treated separetely because with its fixed channel ID it is the only channel you can 
+actually identify while channels are hidden in the server settings. It will only be shown if the lobby is not empty.<br /><br />
+The colours in the Recent column correlate to those in the Recent Connections table. For example, a red mark next to a channel 
+on the left, means that the user that logged in last, and is also red on the right table, is currently in that channel.
+<br /><br /><br />
+<h2>Minimized View:</h2>
+This is what it's all about. Minimized view features most of the information from the default view compressed to use minimum 
+space and server load and presents it in a way that allows you to see everything you need to know at a quick glance.
+<br /><br />
+<strong>Minimized View shows:</strong><br /><br />
+<div align="center"><img src="./-img/vcheck/min.png" alt="" title=""></div><br />
+1. Number of users online<br />
+2. Users by channels**<br />
+3. Users in the lobby (only shown if >0)<br />
+4. Online times of the last 3 users that connected<br />
+5. Current CET time<br />
+6. Total number of Admins online<br />
+7. Additional unhidden information (C=Channels, N=Names, X=Comments)<br /><br />
+**As explained for the default view, the colours correlate to the users that logged on last (4.) so you know what channels 
+the last people are in. Note that the colour of the "newer" user has priority, so if "red" and "green" are in the same 
+channel, the channel is red.
+<br /><br /><br />
+<h2>The Full Potential:</h2>
+Use min view together with a 3rd party program such as <a href="http://www.abstractpath.com/powermenu/" target="_blank">PowerMenu</a> 
+that allows you to make a window 'Always on Top', so it stays on top of Tibia while playing and all you need to check again is 
+clicking the window and pressing F5.
+<br /><br />
+Still too much effort?
+Use Firefox and get the <a href="https://addons.mozilla.org/en-US/firefox/addon/115" target="_blank">ReloadEvery</a> addon to make 
+the page refresh automatically every X seconds or minutes. Since all vent lookup scripts function in realtime you'll have a live 
+alarm system and can prepare for a masslog just a few seconds after the enemy starts gathering.<br /><br />
+<div align="center"><img src="./-img/vcheck/134.jpg" width="487" height="502" alt="" title=""></div><br />
+(I use a resolution of 1600*1200 so the window takes but the space of 1-2 Tibia sqm)<br />
+(Screenshot shows an ancient version with way less details by the way)
+</div><br /><br />
+<a href="./vcheck.html">back</a>
+	
+<div style='clear:both;'></div>
+<div class="foot">
+<br /><br />
+by Flo - <a href="/">tnuC.org</a><br />
+</div>
+</div>
+</div>
+</div>
+</body></html>

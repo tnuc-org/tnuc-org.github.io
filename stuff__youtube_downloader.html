@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>tnuC - youtube downloader</title>
+<link rel="stylesheet" type="text/css" href="/style.css" />
+<link rel="shortcut icon" href=/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="google-site-verification" content="r4kc5inK8BZYGZhicbC-usP4F1rGaeTrqYNChcZRNKI" />
+<meta name="description" content="tnuC Stuff. A simple javascript YouTube downloader that requires no third party software or bookmarks. Download YouTube videos with the click of a bookmark." />
+<meta name="author" content="Flo" />
+<meta name="keywords" content="tnuc,flo,mavina,najko,tibia,cams,eternia,youtube download,download youtube music,download youtube videos,youtube javascript" />
+<meta name="robots" content="index, follow, noimageindex" />
+</head>
+<body>
+<center>
+<div id="wrap">
+<div id="bnr"></div>
+<div id="bar"><a href="/">tnuC</a> &nbsp;&#187;&nbsp; <a href="/stuff.html">stuff</a> &nbsp;&#187;&nbsp; <a href="/stuff__youtube_downloader.html">youtube downloader</a>
+<div id="barsw"></div>
+<div id="barnw"></div>
+<div id="barne"></div>
+<div id="barse"></div>
+</div>
+<div id="content">
+<div id="inner">
+
+
+<h1>Youtube Downloader</h1>
+<a href="/stuff.html">back</a><br /><br />
+<span class="wrn">Stopped working with the latest YouTube re-design, just use <a href="http://jdownloader.org/">JDownloader</a>.<br />
+JDownloader is a popular download manger specialised in hosting sites like rapidshare.<br />
+Paste a YouTube link into JDownloader and it will download and convert the video automatically.</span><br /><br />
+<strike>
+Ever wanted to download YouTube videos without installing extra software or registering on dubious websites?<br />
+It's as simple as creating a JavaScript bookmark and clicking it whilst on a YouTube video page.<br />
+Simply drag the button below onto your bookmarks bar:<br /><br />
+<center><a style="font-size:24px;font-weight:bold;padding 4px 4px 4px 4px;border:3px solid silver;" href="javascript:var fmt=35;var fmt_url_map = unescape(yt.getConfig('SWF_ARGS')['fmt_url_map']);var fmt_url_a = fmt_url_map.split(',');for(idx in fmt_url_a){fmt_url_a[idx]=fmt_url_a[idx].split('|');if(fmt_url_a[idx][0]==fmt){window.location.assign(fmt_url_a[idx][1]);break;}};">Download this Video</a></center>
+<br /><br />Your browser doesn't have a bookmarks bar?<br />
+Create a new blank bookmark and copy this into the URL field:
+<textarea class="cform" style="width:580px;height:90px;">javascript:var fmt=35;var fmt_url_map = unescape(yt.getConfig("SWF_ARGS")['fmt_url_map']);var fmt_url_a = fmt_url_map.split(',');for(idx in fmt_url_a){fmt_url_a[idx]=fmt_url_a[idx].split('|');if(fmt_url_a[idx][0]==fmt){window.location.assign(fmt_url_a[idx][1]);break;}};</textarea>
+<br /><br />Now, when on a YouTube page, click your bookmark to start downloading.<br />
+If the player has fully loaded the video already, download will be instantaneous.<br /><br />
+Output format is .FLV, flash video, played by most of the more popular media players like VLC.<br />
+If you want the sound/music only, look for a 'FLV to MP3 Converter'.<br />
+I don't have a good free one just now, will provide one in the near future.
+</strike>
+<br /><br /><a href="/stuff.html">back</a>
+
+
+
+
+</div>
+</div>
+<div id="foot">
+<p class="nobold">last updated Jun 30 2012-ish</p>
+<p><a href="/about.html">about</a> &nbsp;&bull;&nbsp; <a href="/contact.html">contact</a></p>
+<p>2006-2012 Flo &nbsp;|&nbsp; <a class="silver" href="/">tnuC v8</a>
+</p>
+</div>
+</center>
+</body>
+</html>

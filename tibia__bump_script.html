@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>tnuC - bump script</title>
+<link rel="stylesheet" type="text/css" href="/style.css" />
+<link rel="shortcut icon" href=/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="google-site-verification" content="r4kc5inK8BZYGZhicbC-usP4F1rGaeTrqYNChcZRNKI" />
+<meta name="description" content="tnuC Tibia Stuff. BUMP.php - a script to automatically post on Tibia.com for you." />
+<meta name="author" content="Flo" />
+<meta name="keywords" content="tnuc,flo,mavina,najko,tibia,cams,eternia,bump,autoposter,forum script" />
+<meta name="robots" content="index, follow, noimageindex" />
+</head>
+<body>
+<center>
+<div id="wrap">
+<div id="bnr"></div>
+<div id="bar"><a href="/">tnuC</a> &nbsp;&#187;&nbsp; <a href="/tibia.php">tibia</a> &nbsp;&#187;&nbsp; <a href="/tibia__bump_script.html">bump script</a>
+<div id="barsw"></div>
+<div id="barnw"></div>
+<div id="barne"></div>
+<div id="barse"></div>
+</div>
+<div id="content">
+<div id="inner">
+
+
+<h1>BUMP</h1>
+<a href="/tibia.html">back</a><br /><br />
+
+BUMP is a Tibia.com auto-poster.<br />
+Give it an account with a post char and it:<br />
+-posts a single reply (ie. to bump a single thread),<br />
+-spams replies every 32 seconds (ie. to be a massive dick),<br />
+-creates a new thread on all world boards or<br />
+-creates a new thread on all trade boards<br /><br />
+I created it for personal use, so there's no debug output telling you what went wrong - if something went wrong.<br />
+Feel free to contact me for help though.<br /><br />
+
+<strong>Requirements:</strong><br />
+PHP5+ with cURL<br />
+Cronjob (optional)<br /><br />
+
+<strong>Setup:</strong><br />
+-Download and extract the rar<br />
+-Open it in a text editor (ie. Notepad)<br />
+-Enter your account and post data, uncomment the function call of choice (self-explanatory in source)<br />
+-Upload the .PHP file to your server<br />
+-Create and upload a text file named curltmpx.txt with CHMOD 666 to the same folder <span class="phpstr">**</span><br />
+-Run the script manually or set up a cronjob<br /><br />
+<span class="phpstr">**</span> for cURL cookies. Will be auto-created if PHP already has CHMOD 666 for the containing folder.<br /><br />
+
+<strong>Options and Settings:</strong><br />
+<pre style="display:inline;">
+static $accname     = '1234567';     // Tibia Account Name, always needed.
+static $password    = 'p@$$w0rD';    // Tibia Account Password, always needed.
+static $charname    = 'My Char';     // Char Name, always needed unless you specify a $cid.
+static $text        = "Hello World"; // Always needed, \n for linebreak (ie. "Te\nxt").
+static $title       = '';            // Thread/Post subject, optional in bump/post mode.
+static $threadid    = '1234567';     // The Thread ID. Only needed for bump/post mode.
+static $cid         = '';            // The Character UID, leave blank if unknown (default).
+                                     // Use this instead of a name if charname has ' or &auml;&ouml;&uuml;.
+                                     // Using cid will save one HTTP request per script call.
+static $spam_rep    = 9;             // Posts per script call (spam mode)</pre>
+<br /><br />
+<strong>Download:</strong><br />
+<a class="bld" href="/-files/Bump.rar">Bump.rar</a>
+<br /><br /><a href="/tibia.html">back</a>
+
+
+</div>
+</div>
+<div id="foot">
+<p class="nobold">last updated Jun 30 2012-ish</p>
+<p><a href="/about.html">about</a> &nbsp;&bull;&nbsp; <a href="/contact.html">contact</a></p>
+<p>2006-2012 Flo &nbsp;|&nbsp; <a class="silver" href="/">tnuC v8</a>
+</p>
+</div>
+</center>
+</body>
+</html>

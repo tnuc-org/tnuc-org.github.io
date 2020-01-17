@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>tnuC - hkc3 manual</title>
+<link rel="stylesheet" type="text/css" href="/style.css" />
+<link rel="shortcut icon" href=/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="google-site-verification" content="r4kc5inK8BZYGZhicbC-usP4F1rGaeTrqYNChcZRNKI" />
+<meta name="description" content="tnuC Tibia Stuff. The manual to using my HotkeyChanger / HKC." />
+<meta name="author" content="Flo" />
+<meta name="keywords" content="tnuc,flo,mavina,najko,tibia,cams,eternia,hotkeys,hotkey changer,hkc,hkc3,hkc4,help,manual" />
+<meta name="robots" content="index, follow, noimageindex" />
+</head>
+<body>
+<center>
+<div id="wrap">
+<div id="bnr"></div>
+<div id="bar"><a href="/">tnuC</a> &nbsp;&#187;&nbsp; <a href="/tibia.php">tibia</a> &nbsp;&#187;&nbsp; <a href="/tibia__hkc3.html">hkc3</a> &nbsp;&#187;&nbsp; <a href="/tibia__hkc3help">manual</a>
+<div id="barsw"></div>
+<div id="barnw"></div>
+<div id="barne"></div>
+<div id="barse"></div>
+</div>
+<div id="content">
+<div id="inner">
+
+
+<h2>HKC3 - Manual</h2>
+<a href="/tibia__hkc3.html">back</a><br /><br /><br />
+
+<strong>Table of contents</strong><br />
+<a href="#introduction">Introduction</a><br />
+<a href="#setup">Setup</a><br />
+<a href="#quickstart">Quickstart</a><br />
+<a href="#mc_mode">MC Mode</a><br />
+<a href="#shortcuts">Shortcuts and Titles</a><br />
+<a href="#silent_boot_mode">Silent/Boot Mode</a><br />
+<a href="#auto_restore">Automatic Config Restore</a><br />
+<a href="#backup">Backup/Restore Function</a><br />
+<a href="#faq_or_so">QNAASICJSFAQ (Questions never actually asked so I can't just say FAQ)</a><br />
+<br /><br /><br />
+
+<strong><a name="introduction"></a>Introduction:</strong><br />
+Tired of waiting for CIP to implement a solution to the hotkey problem?<br />
+Tired of losing your entire configuration when watching/playing an older cam/OT?<br />
+Tired of not being able to use the same set of mapfiles when using different Config Paths?<br />
+Or, tired of having to set your VIP icons again for every single config if going by copypasting?<br />
+HKC3 can solve all those problems - and more.<br /><br />
+HKC3 is a handy little application that allows you to use up to 10 different sets of hotkeys at the same time. You can switch from one to another as simply as double-clicking a desktop shortcut. Note, however, that you cannot change hotkeys during actual gameplay but have to close Tibia first. But! you can switch to another set (for an MC client) while you already have others running, with the newly implemented MC mode. VIP icons etc? Everything auto-saved to all the other sets of course.<br /><br /><br />
+
+<strong><a name="setup"></a>Setup:</strong><br />
+Close Tibia, extract the .rar, <strike>put the HKC3 folder including all of its content into your Tibia folder (eg: C:\Program Files\Tibia\HKC3\)</strike> and run hkc3.bat once.<br /><br />
+Setup will create 9 additional hotkey sets as copies of your current configuration.<br />
+A backup of your mapfiles will be made and you'll find 3 new shortcuts on your desktop: One to the main menu of HKC3 and two more to switch to Set 1 and Set 2 respectively. You can create more or customise those two at any time later on.<br /><br /><br />
+
+<strong><a name="quickstart"></a>Quickstart:</strong><br />
+All right, installation finished. Your active hotkey set will be number 1. Let's switch to set 2.<br />
+<strong>Close all running Tibia clients</strong> and run the "Hotkey Set 2" shortcut on your desktop.<br />
+Start Tibia and log in. Your hotkeys will be the same still (since all new sets are copies of the intial config).<br />
+For illustration, change one of the hotkeys, eg. make F1 say "THIS IS SET 2".<br />
+<strong>Close Tibia again</strong>, run the "Hotkey Set 1" shortcut. When switching, the previous set is saved automatically.<br />
+Open up Tibia and you'll see your test hotkey is not changed here but in set 2 only.<br />
+And that's how HKC3 works.<br /><br />
+VIP data like icons and comments will be made global, meaning it will be the same for all of your sets.<br />
+Just remember one thing: <strong>Before switching sets you MUST close all running Tibia clients first</strong>.<br />
+Unless, you use MC Mode.<br /><br /><br />
+
+<strong><a name="mc_mode"></a>MC mode:</strong><br />
+The most important addition in version 3.<br />
+With MC mode you can switch sets whenever you want, no need to close Tibia before switching sets anymore.<br />
+You can, for example, have Tibia running with set 4, then switch to set 6 and open a new client with that.<br />
+On the downside, MC mode will NOT autosave upon switching sets. To save your configs with MC mode enabled, 
+either open the HKC3 main menu and select "Save current config" OR use a SAVE desktop shortcut. For more information 
+on the latter look at the next chapter of this manual.<br />
+Note that when saving, the saved config will be that of last closed client.<br /><br />
+You can enable or disable MC mode from the HKC3 main menu by going to the "Advanced Options" menu.<br />
+After disabling MC mode no data will be saved upon your first switching sets.<br /><br /><br />
+
+<strong><a name="shortcuts"></a>Shortcuts and Titles:</strong><br />
+To create a new Shortcut open up the HKC3 main menu and select "Create Desktop Shortcut".<br />
+Choose the hotkey set you want the shortcut to activate and an icon.<br />
+The new shortcut will by default be labelled "Hotkey Set <number>".<br />
+You can label your hotkey sets by giving them "Titles" in the "Advanced Options" menu.<br />
+Not only does this help you find your way through switch/save menus, but it also affects default shortcut names.<br /><br />
+Then there's the SAVE shortcut:<br />
+It saves your current config (that of the last closed Tibia client) to one of the sets. 
+By default it will save to your last opened set, but you'll be able to choose a different destination set. 
+The save menu will display the first couple of hotkeys of the set you are about to save to, so you can make sure you're saving to the right set.<br /><br /><br />
+
+<strong><a name="silent_boot_mode"></a>Silent/Boot mode:</strong><br />
+When Silent mode is enabled the DOS box closes automatically after switching sets or saving your config instead of waiting for you to press a key. This is particularly handy when combined with Boot mode, which will automatically start up Tibia after switching to another hotkey set (which is why you have to put the HKC folder into your Tibia folder, else there's no way for me to find the right Tibia on your computer really).<br /><br /><br />
+
+<strong><a name="auto_restore"></a>Automatic Config Restore:</strong><br />
+Another new, and really needed, feature. Upon switching sets HKC3 will check the size of your current Tibia.cfg file. If it is smaller than 1024byte (1kb) switching sets will be aborted, no data will be saved and the previous config restored. No data loss. This is to avoid major fuckups when accidentally resetting your config by playing/watching an &lt;OLDER VERSION&gt; OT/cam while having a &lt;LASTEST VERSION&gt; hotkey set enabled.<br /><br />
+Getting stuck in an infinite loop trying to set up an &lt;OLDER VERSION&gt; set?<br />
+Pretty much impossible with the size used for this check. But if you still manage to do so, just change 2-3-4 "useless" hotkeys like Shift+F7 or the fuck do I know to "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" or something like that, to push up the filesize, then close the client and save the set manually just to make sure.<br /><br /><br />
+
+<strong><a name="backup"></a>Backup/Restore Function</strong><br />
+Pretty much self-explanatory. Only difference to the HKC2 version of it is that you can make backups of your mapfiles as well. And that it doesn't save in a random folder on C:\ anymore but inside ApplicationData like the rest of your HKC3 data.<br /><br /><br />
+
+<strong><a name="faq_or_so"></a>QNAASICJSFAQ (Questions never actually asked so I can't just say FAQ)</strong><br />
+Q: Why still Batch?<br />
+A: It's the pretty much fastest and easiest way to handle something like this. Besides it offers transparency, meaning you can look at the source to be sure it's safe.<br /><br />
+Q: Why do I have to put the HKC folder into my Tibia folder?<br />
+A: To make sure Boot mode works properly and you don't get a "Tibia.exe" not found error. Pretty sure not even half of you will use it, but I'm also sure if I hadn't done it like that, I could spam "PUT IT INTO TIBIA FOLDER IF YOU WANT IT TO WORK" all over this manual and people still wouldn't get it. People are idiots, so you have to force them not to fuck up. This won't be necessary anymore with HKC4.<br /><br />
+Q: I switched to another set while Tibia was running (MC mode off), what can I do?<br />
+A: Simple answer: Switch back right away and nothing will happen. Less simple answer: The config file is read into the client whenever you open a new instance of Tibia and not saved back before you close that (or another) client again. You do the maths.<br /><br />
+Q: What is XXMKLINK.EXE?<br />
+A: XXMKLINK is a tool by Pixelab Inc. (www.xxcopy.com) that allows the creation of shortcuts under batch, which under normal circumstances is not possible.<br /><br />
+Q: So I went to Advanced Options -> Show AppData folders... what's that?<br />
+A: If you have to ask, it's probably best if you just stay away from there.<br /><br />
+Q: What about compatibility with future updates?<br />
+A: HKC3 is generally forward compatible, unless CIP makes major changes to the .cfg files.<br /><br />
+Q: I still have problems, even after reading (and understanding) this manual (and I know this is not a question).<br />
+A: Contact me using <a href="/contact.html">this form</a>.
+
+
+</div>
+</div>
+<div id="foot">
+<p class="nobold">last updated Jun 30 2012-ish</p>
+<p><a href="/about.html">about</a> &nbsp;&bull;&nbsp; <a href="/contact.html">contact</a></p>
+<p>2006-2012 Flo &nbsp;|&nbsp; <a class="silver" href="/">tnuC v8</a>
+</p>
+</div>
+</center>
+</body>
+</html>
